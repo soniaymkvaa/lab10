@@ -3,12 +3,13 @@ package singleton;
 import lombok.SneakyThrows;
 
 import java.sql.DriverManager;
+import java.sql.Connection;
 import java.sql.Statement;
 
 public class DBConnection {
     private static DBConnection dbconnection;
 
-    private DBConnection connection;
+    private Connection connection;
 
     @SneakyThrows
     private DBConnection() {
